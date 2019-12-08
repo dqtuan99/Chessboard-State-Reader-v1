@@ -28,9 +28,6 @@ class BoardRecognition:
         corners = []
         while len(corners) < 81:
             image = self.cam.takePicture()
-            # TESTING
-            # imgpath = '../board/28.jpg'
-            # image = cv2.imread(imgpath)
             # Threshold image
             adaptiveThresh, img = self.cleanImage(image)
             # Remove background
@@ -83,8 +80,6 @@ class BoardRecognition:
                 if ratio > Lratio:
                     largest = contours[c]
                     Lratio = ratio
-                    # Lperimeter = perimeter
-                    # Larea = area
                 else:
                     pass
 

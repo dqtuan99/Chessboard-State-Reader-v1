@@ -37,31 +37,3 @@ class Camera:
         time.sleep(0.5)
 
         return img
-
-    # def takePicture(self):
-    #     img = cv2.imread('../board/photo.jpg')
-    #     img = adjust_image_gamma_lookuptable(img, gamma=0.8)
-    #     # print(img.shape)
-    #     # if img.shape[0] > img.shape[1]:
-    #     #     img = np.rot90(img)
-    #
-    #     # img = cv2.resize(img, (1024, 774), interpolation=cv2.INTER_AREA)
-    #     # cv2.imwrite('../board/shot-out.jpg', img)
-    #     # img = np.rot90(img)
-    #     img = imutils.resize(img, width=500)
-    #     # print(img.shape)
-    #     cv2.imshow('imageeee', img)
-    #
-    #     return img
-
-    # def takePicture3(self):
-    #     img = cv2.imread('../board/28-2.jpg')
-    #     img = imutils.resize(img, width=500)
-    #
-    #     return img
-    #
-    # def takePicture4(self):
-    #     img = cv2.imread('../board/28-3.jpg')
-    #     img = imutils.resize(img, width=500)
-    #
-    #     return img

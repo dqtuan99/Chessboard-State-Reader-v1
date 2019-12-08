@@ -26,10 +26,6 @@ def popUpImage(imgpath, label='', destroy=True):
         label.pack(padx=10, pady=10)
 
     img = Image.open(imgpath)
-    # basewidth = 500
-    # wpercent = (basewidth/float(img.size[0]))
-    # hsize = int((float(img.size[1]) * float(wpercent)))
-    # img = img.resize((basewidth, hsize), Image.ANTIALIAS)
     tkImg = ImageTk.PhotoImage(img)
     canvas.create_image(0, 0, image=tkImg, anchor=tk.NW)
     canvas.tkImg = tkImg
@@ -174,9 +170,6 @@ class ChooseSidePage(tk.Frame):
                                                    controller.move.set(controller.game.CPUMove()),
                                                    popUpImage('./ProcessImage/CPUMove.jpg',
                                                               label='CPU move')])
-        # blackButton = tk.Button(self, text='Black', font=MED_FONT,
-        #                         command = lambda: [controller.show_frame(CPUMovePage),
-        #                                            controller.move.set(controller.game.CPUMove())])
         whiteButton = tk.Button(self, text='White', font=MED_FONT,
                                 command = lambda: [controller.show_frame(PlayerMovePage)])
 
@@ -200,13 +193,6 @@ class CPUMovePage(tk.Frame):
                                                  self.checkValid(controller),
                                                  popUpImage('./ProcessImage/Identified.jpg',
                                                             label='Identified')])
-        # CPUButton = tk.Button(self, text='Done', font=MED_FONT,
-        #                       command = lambda: [controller.game.updateCurrent(),
-        #                                          self.checkValid(controller),
-        #                                          popUpImage('./ProcessImage/Previous.jpg',
-        #                                                     label='Previous'),
-        #                                          popUpImage('./ProcessImage/Identified.jpg',
-        #                                                     label='Identified')])
 
         label.pack(padx=10, pady=10)
         self.moveLabel.pack(padx=10, pady=10)
@@ -244,13 +230,6 @@ class PlayerMovePage(tk.Frame):
                                                     self.checkValid(controller),
                                                     popUpImage('./ProcessImage/Identified.jpg',
                                                                label='Identified')])
-        # playerButton = tk.Button(self, text='Done', font=MED_FONT,
-        #                          command = lambda: [controller.game.playerMove(),
-        #                                             self.checkValid(controller),
-        #                                             popUpImage('./ProcessImage/Previous.jpg',
-        #                                                        label='Previous'),
-        #                                             popUpImage('./ProcessImage/Identified.jpg',
-        #                                                        label='Identified')])
         resignButton = tk.Button(self, text='Resign', font=MED_FONT,
                                  command = lambda: [controller.show_frame(GameOverPage)])
 

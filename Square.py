@@ -44,7 +44,6 @@ class Square:
         cv2.circle(image, self.roi, self.radius, color, thickness, cv2.LINE_AA)
 
     def roiColor(self, image):
-        # Init mask
         maskImage = np.zeros((image.shape[0], image.shape[1]), np.uint8)
         # Draw ROI circle on mask
         cv2.circle(maskImage, self.roi, self.radius, (255,255,255), -1, cv2.LINE_AA)
