@@ -18,7 +18,7 @@ imutils == 0.5.3
 # ChessEngine.py: 3
 # Line.py: 9
 # Square.py: 9
-numpy == 1.17.2
+numpy == 1.22.0
 
 # Board.py: 9
 # BoardRecognition.py: 10
